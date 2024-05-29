@@ -1,0 +1,253 @@
+:host
+{
+    .gradient
+    {
+        background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+        background: linear-gradient(to right, #4CA1AF, #2C3E50);
+    }
+    &::before
+    {
+        content: '';
+        display: flex;
+        width: 100%;
+        height: 150px;
+        margin-bottom: -65px;
+        background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+        background: linear-gradient(to right, #4CA1AF, #2C3E50);
+        ;
+    }
+    .container-fluid
+    {
+        margin-bottom: 30px;
+    }
+    header,aside,.container-fluid
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header > img 
+    {
+        border-radius: 50%;
+        border: 5px solid antiquewhite;
+        position: relative;
+        top: -20px;
+        width: 220px;
+        height: 220px;
+    }
+    h1 
+    {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-family: 'Gambetta', serif;
+        letter-spacing: -1px;
+        transition: 700ms ease;
+        font-variation-settings: "wght" 311;
+        margin-bottom: 0.8rem;
+        color: PaleGoldenRod;
+        outline: none;
+        text-align: center;
+      }
+      
+      h1:hover 
+      {
+        font-variation-settings: "wght" 582; 
+        letter-spacing: 4px;
+      }
+    aside
+    {
+        p
+        {
+            max-width: 400px;
+            text-align: justify;
+        }
+        nav 
+        {
+            margin: 20px 0;
+            ul 
+            {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                padding: 0;
+            }
+            li 
+            {
+                a 
+                {
+                    width: 250px;
+                }
+            }   
+        }
+        section
+        {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            figure 
+                {
+                    width: 290px;
+                    height: 77px;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    border: 0.2rem solid #fff;
+                    border-radius: 10px;
+                    box-shadow: 
+                    0 0 0.2rem #fff,
+                    0 0 0.2rem #fff,
+                    0 0 2rem #4CA1AF,
+                    0 0 0.8rem #4CA1AF,
+                    0 0 2.8rem #2C3E50,
+                    inset 0 0 1.3rem #2C3E50;
+
+                    figcaption
+                        {
+                            a
+                                {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: flex-start;
+                                    flex-direction: column;
+                                    p
+                                        {
+                                            margin: 3px 0;
+                                        }
+                                    strong
+                                        {
+                                            color: var(--skin-color4);
+                                        }
+                                }
+                        }
+                }
+        }
+    }
+    @media (max-width: 750px){
+        header > img
+        {
+            height: 130px;
+            width: 130px;
+        }
+        aside
+        {
+            nav
+            {
+                ul
+                {
+                    flex-direction: column;
+                    gap: 15px;
+
+                    li, li a
+                        {
+                            width: 90%;
+                            min-width: 260px;
+                        }
+                }
+            }
+        }
+        section
+        {
+            flex-direction: column;
+            gap: 15px;
+            figure
+            {
+                width: 100%;
+            }
+        }
+        
+    }
+    .btn
+    {
+        background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+        background: linear-gradient(to right, #4CA1AF, #2C3E50);
+        font-weight: bold;
+    }
+    .btn:hover
+    {
+    transition: ease 1s;
+    border: 1px solid transparent;
+    background-position: 100%;
+    transform: scale(1.02);
+    transition: background 1s, transform 0.3s ease-in-out;
+    }
+.fadeIn
+{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-duration: 3s;
+}
+.wiggle
+{
+    animation: wiggle 2.2s linear infinite;
+}
+}
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(20%);   
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes wiggle {
+    0% {
+        transform: rotate(0);
+    }
+    15% {
+        transform: rotate(-10deg);
+    }
+    20% {
+        transform: rotate(8deg);
+    }
+    25% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(8deg);
+    }
+    35% {
+        transform: rotate(-8deg);
+    }
+    40%, 100% {
+        transform: rotate(0);
+    }
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInRight {
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.slideInLeft
+{
+    animation-name: slideInLeft;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+.slideInRight
+{
+    animation-name: slideInRight;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}

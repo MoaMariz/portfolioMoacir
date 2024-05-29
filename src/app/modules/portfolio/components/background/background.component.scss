@@ -1,0 +1,110 @@
+:host
+{
+    .container-fluid
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+        overflow-x: hidden;
+    }
+    .title h3
+    {
+        margin-top: 2rem;
+        font-weight: 400;
+        font-size: 16px;
+        max-width: 800px;
+        text-align: justify;
+    }
+    .row
+    {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: center;
+        width: 100%;
+    }
+    .education,
+    .experience
+    {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-top: 30px;
+    }
+    .padd-15
+    {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .timeline-box
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .timeline
+    {
+    
+        padding: 30px 15px;
+        border-radius: 10px;
+        width: 100%;
+        position: relative;
+    }
+    .timeline .timeline-item
+    {
+        position: relative;
+        padding-left: 37px;
+        padding-bottom: 50px;
+    }
+    .timeline .timeline-item:last-child
+    {
+        padding-bottom: 0;
+    }
+    .timeline .timeline-item::before
+    {
+        content: '';
+        width: 2px;
+        position: absolute;
+        height: 100%;
+        left: 7px;
+        top: 0;
+        background-color: var(--skin-color3);
+    }
+    .timeline .circle-dot
+    {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%; 
+        background-color: var(--skin-color3);
+    }
+    .timeline .timeline-date
+    {
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 12px;
+        color: antiquewhite;
+        text-align: left;
+    }
+    .timeline .timeline-date fa
+    {
+        margin-right: 5px;
+    }
+    .timeline .timeline-title
+    {
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 15px;
+        text-transform: capitalize;
+        color: var(--skin-color4);
+    }
+    .timeline .timeline-text
+    {
+        line-height: 25px;
+        font-size: 16px;
+        text-align: justify;
+        color: var(--text-black-700);
+    }
+}
